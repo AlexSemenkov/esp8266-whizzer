@@ -1,8 +1,8 @@
 /*
- * user_json.h
+ *  user_json.h
  *
  *  Created on: 10 dec 2016
- *      Author: asemenkov
+ *      Author: Espressif Systems (Shanghai) Pte., Ltd.
  */
 
 #ifndef TEST_T_USER_JSON_H_

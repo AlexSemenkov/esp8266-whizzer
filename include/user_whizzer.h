@@ -1,5 +1,5 @@
 /*
- * user_whizzer.h
+ *  user_whizzer.h
  *
  *  Created on: 22 dec 2016
  *      Author: asemenkov
@@ -30,7 +30,6 @@
 #define MOTOR_BRAKE_IO_MUX     		PERIPHS_IO_MUX_MTMS_U
 #define MOTOR_BRAKE_IO_NUM     		BIT14
 #define MOTOR_BRAKE_IO_FUNC    		FUNC_GPIO14
-
 
 LOCAL void user_set_motor_brake(bool);
 LOCAL void user_set_direction(bool);
