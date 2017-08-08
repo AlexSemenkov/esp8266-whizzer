@@ -1,4 +1,4 @@
-.cproject
-.project
-.build/
-.firmware/
+/.cproject
+/.project
+/build/
+/firmware/
