@@ -9,7 +9,7 @@ Whizzer is IoT device designed to emulate human walking on smart sneakers with p
 ##### 3. Allows to emulate desired amount of steps for further verification
 ##### 4. Control a duration and speed over the top of a single step
 
-Demonstration
+Demo Video
 ---
 [![IoT Whizzer Demo](https://img.youtube.com/vi/fBj2eXHkNwg/0.jpg)](https://youtu.be/fBj2eXHkNwg)
 
@@ -23,7 +23,7 @@ Installation
 4. Download [MinGW](http://sourceforge.net/projects/mingw/files/Installer/). Run mingw-get-setup.exe without GUI: uncheck *"...also install support for the graphical user interface"*
 5. Download and run custom pack of [scripts for MinGW modules installation](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKitAddon) (by *Mikhail Grigoriev*)
 
-Connection to Internet
+Connection to the Internet
 ----
 1. Device initial state is `SOFT_AP` mode
 2. Connect PC to the softAP (SSID for SOFT_AP is `ESP_XXXXXX`, no password)
