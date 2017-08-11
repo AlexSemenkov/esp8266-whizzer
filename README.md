@@ -4,10 +4,10 @@ Description
 
 #### Its features:
 
-######   1. Aimed at automation QA testing
-######   2. Remote connection via HTTP protocol
-######   3. Allows to emulate desired amount of steps for further verification
-######   4. Control a duration and speed over the top of a single step
+##### 1. Aimed at automation QA testing
+##### 2. Remote connection via HTTP protocol
+##### 3. Allows to emulate desired amount of steps for further verification
+##### 4. Control a duration and speed over the top of a single step
 
 Installation
 ----
@@ -15,7 +15,7 @@ Installation
 
 1. Download and install custom [Espressif-ESP8266-DevKit-v2.2.1-x86](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKit) (by Mikhail Grigoriev)
 2. Download and install [Java Runtime](http://www.oracle.com/technetwork/java/javase/downloads/index.html) x86 or x64
-3. Download [C/C++ Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-cc-developers/oxygenr) and install it in root folder C:\
+3. Download [C/C++ Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-cc-developers/oxygenr) and install it in root folder `C:\`
 4. Download [MinGW](http://sourceforge.net/projects/mingw/files/Installer/). Run mingw-get-setup.exe without GUI: uncheck "...also install support for the graphical user interface"
 5. Download and run custom pack of [scripts for MinGW modules installation](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKitAddon) (by Mikhail Grigoriev)
 
@@ -23,20 +23,23 @@ Connection to Internet
 ----
 1. Device initial state is `SOFT_AP` mode
 2. Connect PC to the softAP (SSID for SOFT_AP is `ESP_XXXXXX`, no password)
-3. Send a command to make ESP8266 station connect to router and reboot the device
-	`URL:			http://192.168.4.1/config?command=wifi <br />
-	Method:			POST <br />
-	Content-Type:	application/json <br />
-	Body: 			{ "Request": <br />
-						{ "Station": <br />
-							{ "Connect_Station": <br />
-								{ "ssid": "%ssid%", <br />
-								  "password": "%password%", <br />
-								  "token": "%token%" <br />
-								} <br />
-							} <br />
-						} <br />
-					}`
+3. Send a command to make ESP8266 station connect to router and reboot the device <br />
+	**URL:** `http://192.168.4.1/config?command=wifi` <br />
+	**Method:**	`POST` <br />
+	**Content-Type:** `application/json` <br />
+	**Body:** <br />
+	```json
+	{ "Request":
+		{ "Station":
+			{ "Connect_Station":
+				{ "ssid": "%ssid%",
+				  "password": "%password%",
+				  "token": "%token%"
+				}
+			}
+		}
+	}
+	```
 4. Connected to router, the device tries to communicate with [IoT·Espressif cloud server](http://iot.espressif.cn) for authentication
 5. If everything is OK, mode should be changed to `STATION`, router`s ssid and password are cashed (no need to repeat this procedure again)
 
@@ -60,18 +63,21 @@ Communication with Whizzer
 	
 	* **Optional (if action=emulate_steps):** <br />
 	  `steps_num=[integer]` <br />
-	  `pwm_cycle_decay_stop=[integer`]`
+	  `pwm_cycle_decay_stop=[integer]`
 
 * **Success Response**
 
     **Code:** 200 <br />
-    **Content:**  { "status": 200, <br />
-				"emulating_steps": { <br />
-					"steps_num": 10, <br />
-					"pwm_cycle_decay_stop": 144 }, <br />
-				"nonce": 127915383, <br />
-				"deliver_to_device": true } <br />
-	**Description:** Request is successfully delivered to the device and it has started step emulation process
+    **Content:**
+	```json
+	{ "status": 200,
+	"emulating_steps": {
+	"steps_num": 10,
+	"pwm_cycle_decay_stop": 144 },
+	"nonce": 127915383,
+	"deliver_to_device": true }
+	```
+	**Description:** Request is successfully delivered to the device and step emulation process has been started 
 	
 * **Error Response**
 	
