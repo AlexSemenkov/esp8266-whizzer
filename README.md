@@ -13,11 +13,11 @@ Installation
 ----
 ### relevant to Windows 7/8/10
 
-1. Download and install custom [Espressif-ESP8266-DevKit-v2.2.1-x86](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKit) (by Mikhail Grigoriev)
+1. Download and install custom [Espressif-ESP8266-DevKit-v2.2.1-x86](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKit) (by *Mikhail Grigoriev*)
 2. Download and install [Java Runtime](http://www.oracle.com/technetwork/java/javase/downloads/index.html) x86 or x64
 3. Download [C/C++ Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-cc-developers/oxygenr) and install it in root folder `C:\`
-4. Download [MinGW](http://sourceforge.net/projects/mingw/files/Installer/). Run mingw-get-setup.exe without GUI: uncheck "...also install support for the graphical user interface"
-5. Download and run custom pack of [scripts for MinGW modules installation](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKitAddon) (by Mikhail Grigoriev)
+4. Download [MinGW](http://sourceforge.net/projects/mingw/files/Installer/). Run mingw-get-setup.exe without GUI: uncheck *"...also install support for the graphical user interface"*
+5. Download and run custom pack of [scripts for MinGW modules installation](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKitAddon) (by *Mikhail Grigoriev*)
 
 Connection to Internet
 ----
@@ -76,7 +76,7 @@ Communication with Whizzer
 	    {
 	      "steps_num": 10,
 	      "pwm_cycle_decay_stop": 144
-		},
+	    },
 	  "nonce": 127915383,
 	  "deliver_to_device": true
 	}
