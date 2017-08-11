@@ -1,8 +1,9 @@
 Description
 ----
-Whizzer is IoT device designed to emulate human walking on smart sneakers with pace counter.
+Whizzer is IoT device designed to emulate human walking on smart sneakers. <br />
+It triggers built-in pace counter of the sneaker on the basis of its rotation.
 
-### Its features:
+### Main features:
 
 ##### 1. Aimed at automation QA testing
 ##### 2. Remote connection via HTTP protocol
@@ -26,7 +27,7 @@ Installation
 Connection to the Internet
 ----
 1. Device initial state is `SOFT_AP` mode
-2. Connect PC to the softAP (SSID for SOFT_AP is `ESP_XXXXXX`, no password)
+2. Connect PC to the softAP (SSID for the SOFT_AP is `ESP_XXXXXX`, no password)
 3. Send a command to make ESP8266 station connect to router and reboot the device <br />
 	**URL:** `http://192.168.4.1/config?command=wifi` <br />
 	**Method:**	`POST` <br />
@@ -49,7 +50,7 @@ Connection to the Internet
 
 Communication with Whizzer
 ----
-###### Performed via "IoT·Espressif" cloud service <http://iot.espressif.cn>
+###### Is being hosted by [IoT·Espressif" cloud service](http://iot.espressif.cn)
 
 * **URL** <br />
 	`/v1/device/rpc`
@@ -91,7 +92,7 @@ Communication with Whizzer
 	
 	* **Code:** 500 <br />
 	  **Content:** `{ "message": "devicekey not exists", "status": 500 }` <br />
-	  **Description:** Authorization token (device owner key) is wrong
+	  **Description:** authorization token (device owner key) is wrong
 	
 	* **Code:** 404 <br />
 	  **Content:** `{ "message": "remote peer is disconnected", "status": 404 }` <br />
