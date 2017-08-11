@@ -10,8 +10,8 @@ It triggers built-in pace counter of the sneaker on the basis of its rotation.
 ##### 3. Allows to emulate desired amount of steps for further verification
 ##### 4. Control a duration and speed over the top of a single step
 
-Demo Video
----
+### Demo Video
+
 [![IoT Whizzer Demo](https://img.youtube.com/vi/fBj2eXHkNwg/0.jpg)](https://youtu.be/fBj2eXHkNwg)
 
 Installation
