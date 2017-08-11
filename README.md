@@ -3,7 +3,7 @@ Description
 Whizzer is IoT device designed to emulate human walking on smart sneakers. <br />
 It triggers built-in pace counter of the sneaker on the basis of its rotation.
 
-### Main features:
+### Main Features:
 
 ##### 1. Aimed at automation QA testing
 ##### 2. Remote connection via HTTP protocol
