@@ -9,6 +9,10 @@ Whizzer is IoT device designed to emulate human walking on smart sneakers with p
 ##### 3. Allows to emulate desired amount of steps for further verification
 ##### 4. Control a duration and speed over the top of a single step
 
+Demonstration
+---
+[![IoT Whizzer Demo](https://img.youtube.com/vi/fBj2eXHkNwg/0.jpg)](https://youtu.be/fBj2eXHkNwg)
+
 Installation
 ----
 ### relevant to Windows 7/8/10
