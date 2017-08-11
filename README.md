@@ -1,8 +1,8 @@
 Description
 ----
-  Whizzer is IoT device designed to emulate human walking on smart sneakers with pace counter.
+Whizzer is IoT device designed to emulate human walking on smart sneakers with pace counter.
 
-#### Its features:
+### Its features:
 
 ##### 1. Aimed at automation QA testing
 ##### 2. Remote connection via HTTP protocol
@@ -11,7 +11,7 @@ Description
 
 Installation
 ----
-#### relevant to Windows 7/8/10
+### relevant to Windows 7/8/10
 
 1. Download and install custom [Espressif-ESP8266-DevKit-v2.2.1-x86](http://dl.programs74.ru/get.php?file=EspressifESP8266DevKit) (by Mikhail Grigoriev)
 2. Download and install [Java Runtime](http://www.oracle.com/technetwork/java/javase/downloads/index.html) x86 or x64
@@ -30,14 +30,14 @@ Connection to Internet
 	**Body:** <br />
 	```json
 	{ "Request":
-		{ "Station":
-			{ "Connect_Station":
-				{ "ssid": "%ssid%",
-				  "password": "%password%",
-				  "token": "%token%"
-				}
-			}
-		}
+	  { "Station":
+	    { "Connect_Station":
+	      { "ssid": "%ssid%",
+	        "password": "%password%",
+	        "token": "%token%"
+	      }
+	    }
+	  }
 	}
 	```
 4. Connected to router, the device tries to communicate with [IoT·Espressif cloud server](http://iot.espressif.cn) for authentication
@@ -45,7 +45,7 @@ Connection to Internet
 
 Communication with Whizzer
 ----
-###### Performed via "IoT·Espressif" cloud service `<http://iot.espressif.cn>`
+###### Performed via "IoT·Espressif" cloud service <http://iot.espressif.cn>
 
 * **URL** <br />
 	`/v1/device/rpc`
@@ -70,12 +70,16 @@ Communication with Whizzer
     **Code:** 200 <br />
     **Content:**
 	```json
-	{ "status": 200,
-	"emulating_steps": {
-	"steps_num": 10,
-	"pwm_cycle_decay_stop": 144 },
-	"nonce": 127915383,
-	"deliver_to_device": true }
+	{
+	  "status": 200,
+	  "emulating_steps":
+	    {
+	      "steps_num": 10,
+	      "pwm_cycle_decay_stop": 144
+		},
+	  "nonce": 127915383,
+	  "deliver_to_device": true
+	}
 	```
 	**Description:** Request is successfully delivered to the device and step emulation process has been started 
 	
@@ -106,7 +110,8 @@ Communication with Whizzer
 	  **Description:** the device is emulating steps at the moment
 
 * **Sample Call via Windows CURL**
-	`curl -X GET -H <br />
-	"Content-Type:application/json" <br />
-	-H "Authorization: token %token%" <br />
-	"http://iot.espressif.cn/v1/device/rpc/?deliver_to_device=true&action=emulate_steps&steps_num=10&pwm_cycle_decay_stop=144"`
+
+	> curl -X GET -H <br />
+	> "Content-Type:application/json" <br />
+	> -H "Authorization: token %token%" <br />
+	> "http://iot.espressif.cn/v1/device/rpc/?deliver_to_device=true&action=emulate_steps&steps_num=10&pwm_cycle_decay_stop=144"
