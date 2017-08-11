@@ -1,5 +1,5 @@
 h1 Description
-
+=====================
 Whizzer is IoT device designed to emulate human walking on smart sneakers with pace counter.
 
 h3 Its features:
